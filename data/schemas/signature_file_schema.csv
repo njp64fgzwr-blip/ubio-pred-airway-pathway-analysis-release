@@ -1,0 +1,6 @@
+position,field,type,required,description,public_release_status
+1,signature_id,character,yes,Stable identifier for one of the 39 fixed signatures,Public
+2 onward,gene_symbol,character,yes,Ordered frozen source membership used by ssGSEA,Withheld pending redistribution-rights confirmation
+separate metadata,reader_label,character,yes,Reader-facing pathway label,Public
+separate metadata,source_gene_count,integer,yes,Number of entries in the frozen source signature,Public
+separate metadata,provenance,character,yes,Source material derivation reference and interpretation limit,Public

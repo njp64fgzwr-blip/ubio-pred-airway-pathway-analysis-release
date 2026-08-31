@@ -1,0 +1,96 @@
+# Local configuration template for an authorised full-data run.
+#
+# Copy this file to config/config.yml. That destination is git-ignored.
+# Change only the local input paths and, if required, the local output path.
+# The remaining fields reproduce the locked dissertation analysis and should
+# not be changed when attempting exact reproduction.
+
+inputs:
+  # Directory containing data_clinical.tsv and OMICS+DATA/Transcriptomics/.
+  ubio_pred_source_root: "/authorised/location/processed-adult-export"
+  # Leave blank when data_clinical.tsv is directly beneath the source root.
+  clinical_file: ""
+  # Exact frozen tab-delimited 39-signature file used for the dissertation.
+  signature_file: "/authorised/location/frozen-39-signatures.tsv"
+  # The tracked non-membership provenance file is sufficient for Figure S12.
+  # Override only with a byte-identical authorised copy.
+  signature_provenance_file: "data/signatures/signature_provenance_no_gene_membership.csv"
+
+execution:
+  # Relative paths are resolved from the repository root. This directory is
+  # ignored by Git because it contains participant-level derived files.
+  output_root: "work/full_analysis"
+  run_expensive_nested_cv: true
+  run_pdf_render_qa: true
+  # Keep false for the data-free repository gate. Use validate_results.R
+  # --full explicitly after an authorised full run.
+  full_validation: false
+
+datasets:
+  order:
+    - sputum
+    - brushing_gpl570
+    - biopsy
+    - brushing_rnaseq
+  expected_sample_counts:
+    sputum: 120
+    brushing_gpl570: 149
+    biopsy: 108
+    brushing_rnaseq: 118
+
+signatures:
+  expected_count: 39
+  frozen_sha256: "00aaf4a958729605fd2005294b36f944699067f10cc3e160809f21ac12c8a3d8"
+  provenance_sha256: "5b572e7eecf2c410d8ad677fe6c4a0301fc2efc001cf9c32bd2389890c70cefc"
+
+expression_preprocessing:
+  microarray_input: "supplied LOG2E"
+  microarray_probe_collapse: "median by harmonised gene symbol"
+  rnaseq_cpm_threshold: 1
+  rnaseq_minimum_sample_fraction: 0.10
+  rnaseq_transform: "log2(CPM + 1)"
+
+ssgsea:
+  method: "GSVA::ssgseaParam"
+  min_size: 3
+  max_size: "Inf"
+  alpha: 0.25
+  normalize: true
+  parallel_backend: "SerialParam"
+
+outcomes:
+  FEV1:
+    source_column: fev1_percent_predicted
+    transform: identity
+  FeNO:
+    source_column: feno_ppb
+    transform: log1p
+  blood_eosinophils:
+    source_column: blood_eosinophils_x10_3_uL
+    transform: log1p
+  sputum_eosinophils:
+    source_column: sputum_eosinophils_percent
+    transform: log1p
+  exacerbation_frequency:
+    source_column: exacerbations_previous_12m
+    transform: log1p
+
+cross_validation:
+  outer_repeats: 10
+  outer_folds: 5
+  inner_folds: 5
+  alpha_grid: [0.10, 0.25, 0.50, 0.75, 1.00]
+  lambda_fraction_exponents: [0, -4]
+  lambda_fraction_count: 100
+  seed: 20260813
+  tuning_rule: "one-standard-error lambda within alpha; minimum pooled inner-fold MSE across alpha"
+
+predictive_inference:
+  conditional_participant_bootstrap_replicates: 2000
+  bootstrap_seed: 20260814
+  calibration_bins: 5
+
+heatmaps:
+  primary_display_scale: [-1, 1]
+  primary_values: "normalised ssGSEA pathway activity"
+  complementary_values: "within-pathway z-standardised relative variation"

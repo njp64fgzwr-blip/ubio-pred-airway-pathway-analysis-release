@@ -1,0 +1,3 @@
+field,type,required,description,validation
+Assay ID,character,yes,Controlled assay identifier linking expression rows to a participant,Unique within a dataset
+Subject ID,character,yes,Controlled participant identifier used for clinical linkage,Must exist in the controlled clinical export

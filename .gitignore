@@ -1,0 +1,98 @@
+# R and RStudio state
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+renv/library/
+renv/staging/
+
+# Local configuration and credentials
+.Renviron
+.env
+.env.*
+!.env.example
+config/config.yml
+config/data_paths.yml
+
+# Restricted U-BIOPRED inputs and participant-level derivatives
+data/raw/
+data/controlled/
+data/private/
+data/derived/
+data/participant_level/
+results/
+work/
+cache/
+logs/
+outputs/public/
+
+# Common participant-level and model artefacts
+*.rds
+*.rda
+*.RData
+*Subject_ID*
+*subject_id*
+*participant_id*
+*sample_id*
+*fold_level_predictions*
+*averaged_predictions*
+*model_coefficients.csv.gz
+data_clinical.tsv
+data_mrna.tsv
+samples.tsv
+platform.tsv
+
+# The only samples.tsv permitted in Git is the deterministic demo fixture.
+!tests/synthetic/samples.tsv
+
+# Local documents, archives, and downloaded literature
+*.docx
+*.doc
+*.pptx
+*.xls
+*.xlsx
+*.enl
+*.enlx
+*.Data/
+*.zip
+*.tar
+*.tar.gz
+*.csv.gz
+*.parquet
+*.feather
+*.fst
+*.h5
+*.hdf5
+*.sqlite
+*.db
+*.tiff
+*.tif
+
+# Exact signature membership must remain outside this repository
+*exact_gene_membership*
+*exact_analysed_genes*
+*analysed_gene_symbols*
+*full_signature_membership*
+
+# Temporary and operating-system files
+.DS_Store
+Thumbs.db
+tmp/
+.*_work/
+_recheck_audit_tmp/
+99_ARCHIVE*/
+Rplots.pdf
+
+# Preserve deliberately public repository content
+!data/README.md
+!data/schemas/
+!data/schemas/**
+!data/synthetic/
+!data/synthetic/**
+!data/public_manifests/
+!data/public_manifests/**
+
+# Authorised local outputs remain ignored; only outputs/README.md is tracked.
+!outputs/
+outputs/*
+!outputs/README.md

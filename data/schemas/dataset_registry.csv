@@ -1,0 +1,5 @@
+dataset,dataset_label,compartment,platform,technology,expression_value_field,expected_processed_profiles
+sputum,Sputum GPL570,Sputum,GPL570,microarray,LOG2E,120
+brushing_gpl570,Bronchial brushing GPL570,Bronchial brushing,GPL570,microarray,LOG2E,149
+biopsy,Bronchial biopsy GPL570,Bronchial biopsy,GPL570,microarray,LOG2E,108
+brushing_rnaseq,Bronchial brushing RNA-seq,Bronchial brushing,RNA-seq,rnaseq,VALUE,118

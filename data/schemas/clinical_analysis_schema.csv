@@ -1,0 +1,15 @@
+field,type,required_for_all_analyses,description,allowed_or_expected_values
+Subject_ID,character,yes,Controlled participant linkage identifier,Unique and nonblank
+cohort_source,character,no,Source-coded study group,Controlled vocabulary supplied with the study export
+age,numeric,no,Age in years,Nonnegative
+sex,character,no,Recorded sex category,Source categories retained
+smoking_status,character,no,Recorded smoking-status category,Never; Former; Current; or missing
+bmi,numeric,no,Body mass index in kg/m2,Nonnegative
+ocs_frequency_source,character,no,Source oral-corticosteroid frequency field,Source categories retained
+ocs_dose_mg,numeric,no,Normalised oral-corticosteroid dose in mg,Nonnegative
+fev1_percent_predicted,numeric,no,FEV1 percent predicted used untransformed,Nonnegative
+feno_ppb,numeric,no,Fractional exhaled nitric oxide used after log1p transformation,Nonnegative
+blood_eosinophils_x10_3_uL,numeric,no,Absolute blood eosinophil concentration used after log1p transformation,Nonnegative
+blood_eosinophils_percent,numeric,no,Blood eosinophil percentage retained for descriptive use,0 to 100 where recorded
+sputum_eosinophils_percent,numeric,no,Induced-sputum eosinophil percentage used after log1p transformation,0 to 100 where recorded
+exacerbations_previous_12m,numeric,no,Recorded exacerbation count for the preceding 12 months used after log1p transformation,Nonnegative

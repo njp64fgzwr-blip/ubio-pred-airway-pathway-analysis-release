@@ -1,0 +1,4 @@
+"relative_path","sha256","size_bytes","classification"
+"data/signatures/signature_provenance_no_gene_membership.csv","5b572e7eecf2c410d8ad677fe6c4a0301fc2efc001cf9c32bd2389890c70cefc",23360,"gene-membership-free signature provenance"
+"docs/FIGURE_LEGENDS.md","eadcc63ceac23dd802dcb895386125b72a0e5f509990dcfdf5cf5200a1754e6c",8145,"scientific figure legends without controlled data"
+"outputs/README.md","80acbbfe4ec238449d022c8009dda1350152092b0c32f8102090db8394d12859",784,"controlled-output exclusion notice"

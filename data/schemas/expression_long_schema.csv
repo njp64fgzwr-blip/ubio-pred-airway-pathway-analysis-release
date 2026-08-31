@@ -1,0 +1,9 @@
+technology,field,type,required,description,validation
+microarray,Assay ID,character,yes,Assay identifier used only to join expression rows to the controlled sample-link file,Every value must occur in the corresponding samples.tsv
+microarray,LOG2E,numeric,yes,Supplied log2-scale microarray expression value,Finite numeric value
+microarray,PROBE,character,yes,Microarray probe identifier,Nonblank
+microarray,GENE SYMBOL,character,no,Supplied gene symbol; blank values may be filled from hgu133plus2.db,May be blank
+rnaseq,Assay ID,character,yes,Assay identifier used only to join expression rows to the controlled sample-link file,Every value must occur in the corresponding samples.tsv
+rnaseq,VALUE,numeric,yes,Supplied sparse RNA-seq count,Finite and greater than or equal to zero
+rnaseq,PROBE,character,yes,Ensembl feature identifier with an optional version suffix,Nonblank
+rnaseq,GENE SYMBOL,character,no,Supplied gene symbol used as a documented mapping fallback,May be blank

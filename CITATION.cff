@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: >-
+  If you use this analysis code, please cite this software archive and the
+  relevant primary methodological and signature-source publications.
+title: "Quantifying airway pathway activity and disease heterogeneity in severe asthma: analysis code"
+type: software
+authors:
+  - family-names: Wu
+    given-names: Suhang
+version: 1.0.2
+date-released: 2026-08-31
+license: MIT
+repository-code: "https://github.com/njp64fgzwr-blip/ubio-pred-airway-pathway-analysis-release"
+url: "https://github.com/njp64fgzwr-blip/ubio-pred-airway-pathway-analysis-release"
+abstract: >-
+  R/RStudio workflow for scoring 39 prespecified airway- and asthma-relevant
+  signatures with ssGSEA in four processed adult U-BIOPRED airway
+  transcriptomic datasets, evaluating clinical associations, five predictive
+  modelling strategies, internal repeated nested cross-validation, and
+  matched-participant compartment and platform concordance. Controlled
+  U-BIOPRED data are not included.
+keywords:
+  - asthma
+  - airway transcriptomics
+  - U-BIOPRED
+  - ssGSEA
+  - Elastic Net
+  - nested cross-validation

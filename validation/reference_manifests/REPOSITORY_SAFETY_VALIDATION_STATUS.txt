@@ -1,0 +1,16 @@
+CODE-ONLY REPOSITORY SAFETY VALIDATION
+======================================
+
+STATUS: PASS
+CONTROLLED_UBIOPRED_FILES_TRACKED: 0
+REAL_DISSERTATION_FIGURES_TRACKED: 0
+REAL_RESULT_TABLES_TRACKED: 0
+PARTICIPANT_LEVEL_DERIVATIVES_TRACKED: 0
+EXACT_SIGNATURE_MEMBERSHIP_FILES_TRACKED: 0
+FITTED_MODELS_TRACKED: 0
+
+Tracked evidence includes code, schemas, synthetic fixtures, legends,
+gene-membership-free provenance and non-content checksum inventories.
+
+Any later addition of U-BIOPRED-derived output requires separate institutional
+and U-BIOPRED data-owner approval for the intended storage and audience.

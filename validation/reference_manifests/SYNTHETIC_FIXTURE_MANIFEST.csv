@@ -1,0 +1,7 @@
+"relative_path","sha256","size_bytes","classification"
+"tests/synthetic/clinical.tsv","77328eb776c032254a3e98c6b1469fa15050b1ecb040a5aac4b978a149f9236f",1213,"fully_synthetic"
+"tests/synthetic/expression.tsv","cccea17d5cca0d2c98a83a386007fd197fbe18314fa746c386c1b7ef0c4bb404",175392,"fully_synthetic"
+"tests/synthetic/generate_fixture.R","b93dca04ad03f18e444e3ccade92668877ea1f3b118cdad1d95cbca917edb758",3640,"fully_synthetic"
+"tests/synthetic/README.md","6ecbcc8ca913358025bdbf1281f274a93a3794ea39f687a4cdb829561158b58b",865,"fully_synthetic"
+"tests/synthetic/samples.tsv","7c10d4646b5680fcb16ba56ffc95562bfbba77163d74ba507f6eb72379690d51",2549,"fully_synthetic"
+"tests/synthetic/signatures.tsv","d7a0b99dc4a5b9d37b9bae15e60461e08f1fcecfa1a26e9532f0de98192e34d1",9396,"fully_synthetic"

@@ -1,0 +1,6 @@
+class,may_contain,excluded_content,release_note
+aggregate_table,Group counts coefficients correlations errors uncertainty intervals and model settings,Direct identifiers row-level observations and individual predictions,Candidate for release after institutional review
+deidentified_figure,Aggregate plots and the locked dissertation visualisations,Printed subject assay or sample identifiers,Candidate for release after institutional review; heatmaps and PCA still encode individual-level patterns visually
+schema,Field names types units and validation rules,Observed study values,Public
+synthetic_fixture,Invented identifiers and simulated values,Any copied or transformed U-BIOPRED value,Public
+signature_metadata,Signature names sizes citations provenance and limitations,Exact gene membership pending rights confirmation,Public metadata only
